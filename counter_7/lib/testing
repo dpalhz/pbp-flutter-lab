@@ -1,0 +1,34 @@
+
+                padding: const EdgeInsets.only(top: 10),
+                child: Container(
+                  color: Theme.of(context).colorScheme.surfaceVariant,
+                  child: SizedBox(
+                    width: 1000,
+                    height: 100,
+                    child: Center(
+                      child: RichText(
+                        text: TextSpan(
+                          // Note: Styles for TextSpans must be explicitly defined.
+                          // Child text spans will inherit styles from parent
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.black,
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: item.judul + "\n",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20.0,
+                                )),
+                            TextSpan(
+                                text: item.nominal.toString() +
+                                    "                                                                                                                                            " +
+                                    item.jenis),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )

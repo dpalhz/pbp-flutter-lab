@@ -1,4 +1,4 @@
-# counter_7
+# TUGAS 7: counter_7
 
 Dipa Alhaza - 2106751543 - PBP B
 
@@ -38,3 +38,44 @@ Memanggil `setState()` memberi tahu framework bahwa keadaan internal objek ini t
 4. Membuat `floatingActionButton` widget untuk button + dan -
 5. Membuat fitur show/hide widget dengan menggunakan Widget `Visibility` pada button target
 6. Mengisi Children pada tahap 4
+
+
+# Tugas 8: Flutter Form
+
+## perbedaan Navigator.push dan Navigator.pushReplacement
+
+`Navigator.push()`: Metode push digunakan untuk menambahkan rute lain ke atas tumpukan screen (stack) saat ini. Halaman baru ditampilkan di atas halaman sebelumnya.
+
+`Navigator.pushReplacement()`: Metode ini digunakan untuk menambahkan rute lain tanpa menambah tumpukan screen (seperti di atas). metode ini mengganti current route dengan route yang ingin dikunjungi atau Ganti rute navigator saat ini yang paling erat menutup konteks yang diberikan dengan mendorong rute yang diberikan dan kemudian membuang rute sebelumnya setelah rute baru selesai dianimasikan.
+
+## Widget yang digunakan
+`Scaffold` widget yang menjadi tempat widget-widget lain (layar putih).
+`Theme` menentukan warna dan gaya font untuk bagian tertentu dari aplikasi
+`drawer` menu navigasi yang tampil penuh pada sisi kanan atau kiri sebuah aplikasi. 
+`ListTile` Membuat list daftar yang berisi satu hingga tiga baris teks yang secara opsional diapit oleh ikon atau widget lain.
+`Form` mempermudah dalam proses pembuatan dan memberi keamanan lebih pada aplikasi flutter seperti validasi, dan aksi lainnya yang umum terdapat pada sebuah form
+`Column` untuk menempatkan widget secara menurun atau vertical
+`Container` "Single Child Widget” yang berarti hanya dapat memiliki satu buah child widget saja. Akan tetapi dalam sebuah container kita dapat menempatkan row, column, text atau bahkan container lain.
+`Padding` menambahkan padding atau ruang kosong di sekitar widget atau banyak widget.
+`Decoration` class utama yang mendefinisikan dekorasi lainnya, seperti `InputDecoration` memberikan animasi atau atribut agar widget lebih interaktif
+`DropdownButton` sebuah menu yang menampilkan sebuah daftar data yang fungsinya untuk memilih suatu nilai data itu sendiri untuk di inputkan kedalam suatu data global
+`TextButton` membuat button tanpa border atau perubahan elevasi secara default
+`Dialog` menampilkan dialog dan mengembalikan hasilnya.
+
+##  jenis-jenis event
+
+onPressed : Event terjadi ketika menekan suatu widget yang di set memiliki event ini.
+onTap : Event terjadi ketika widget di tap
+onChanged : Event terjadi ketika widget di ubah
+onSaved : Event terjadi ketika widget disimpan
+
+##  Cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Cara kerja Navigator seperti screen yang ditumpuk atau pun mengganti tumpukan tersebut (tidak menumpuk seperti stack), setiap kali menggunakan widget ini screen akan mengarahkan ke halaman aplikasi yang dituju. 
+
+## implementasi
+1. Membuat drawer pada file `main.dart`,  `list.dart`, dan `form.dart`
+2. Membuat class Budget untuk menyimpan objeck yang berisikan judul, nominal dan jenis di `main.dart`
+3. membuat widget `Form` pada `form.dart` untuk mengambil input user
+4. membuat event pada `Form` di atas dan memasukan datanya kedalam list
+5. membuat widget untuk menampilkan data pada list tersebut di file `list.dart`
