@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/list.dart';
+import 'package:counter_7/widgets/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,42 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              ListTile(
-                title: const Text("Counter_7"),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MyHomePage(
-                              title: "Program Counter",
-                            )),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text("Tambah Budget"),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyFormPage()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text("Daftar Budget"),
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyListPage()),
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
+        drawer: const MyDrawer(),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

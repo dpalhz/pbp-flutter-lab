@@ -79,3 +79,37 @@ Cara kerja Navigator seperti screen yang ditumpuk atau pun mengganti tumpukan te
 3. membuat widget `Form` pada `form.dart` untuk mengambil input user
 4. membuat event pada `Form` di atas dan memasukan datanya kedalam list
 5. membuat widget untuk menampilkan data pada list tersebut di file `list.dart`
+
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Kita dapat melakukan pengambilan data JSON tanpa membuat model terlebih dahulu dengan meng-assign hasil get data ke suatu variabel tertentu. Pemanggilannya tidak terlalu rumit, namun cukup menyusahkan dalam mencari key element nantinya, kita harus mengecheck nama key yang ada pada data tersebut secara manual. Alasan tersebut yang menjadikan model sebagai alternatif untuk lebih menata data yang di ambil tersebut. Oleh karena itu, jika data yang di ambil lebih kompleks, fitur model tentunya lebih baik, namun jika hanya sedikit data saja yang diambil, kita tidak perlu membuat model.
+
+## Widget yang digunakan pada tugas 9
+
+Widget sebagian besar sama seperti `tugas 8` atau pun `tugas 7`, namun terdapat beberapa widget yang baru diterapkan pada tugas ini, adalah sebagai berikut.
+
+1. `ListView` menampilkan list child data dengan arah scroll
+2. `Row` format tampilan row
+3. `SizedBox` membuat sejenis container box, kotak sederhana dengan tinggi dan lebar yang disebutkan atau widget anak di dalamnya
+4. `GestureDetector` mendeteksi gestur pengguna
+5. `TextSpan` rentang teks yang tidak dapat diubah.
+6. `RichText` menampilkan teks yang menggunakan beberapa gaya berbeda
+
+## mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Membuat model yang sesuai dengan data JSON
+2. Mengambil data dengan `http.get`
+3. Melakukan Decode data pada `no 2` untuk mendapatkan bentuk JSON
+4. Melakukan konversi data json menjadi object `MyWatchList` (model yang dibuat diawal)
+5. Menampilkan data pada widget yang sesuai dengan `AsyncSnapshot`
+
+## Implementasi
+
+1. Membuat class drawer terpisah pada folder widget, yang mengarahkan pada page-page Apps
+2. Membuat Model untuk data JSON susuai dengan tutorial Lab 8
+3. Membuat folder page yang berisikan `detail.dart` yang menampilkan detail salah satu objeck MywatchList dan `my_watchlist_page.dart` sebagai list data objeck `MyWatchList`.
+4. Menerapkan Bonus dengan memberi checkbox dan eventnya pada List pada no 3, dan memberikan outline warna (untuk membedakan watched dan unwatched movie)
+5. Merapikan tampilan widget-widget.
